@@ -10,7 +10,5 @@
         "mhutchie.git-graph"
       ]
     }
-  },
-  "postCreateCommand": "curl -fsSL https://bun.sh/install | bash",
-  "postStartCommand": "bun install"
+  }
 }
