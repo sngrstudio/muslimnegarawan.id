@@ -28,7 +28,7 @@ export const fetchQuery = async ({
         throw new Error(err.message)
       })
     }
-    return json
+    return json as unknown
   } catch (error) {
     console.error(error)
     return null
