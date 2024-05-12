@@ -1,21 +1,23 @@
 {
   "name": "muslimnegarawan.id",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "astro": "astro",
     "build": "astro check && astro build",
+    "dev": "astro dev",
     "preview": "astro preview",
-    "astro": "astro"
+    "start": "astro dev"
   },
   "dependencies": {
-    "@astrojs/check": "^0.6.0",
     "@astrojs/node": "^8.2.5",
     "@fastify/middie": "^8.3.1",
     "@fastify/static": "^7.0.4",
     "astro": "^4.8.2",
-    "fastify": "^4.27.0",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.6.0",
     "typescript": "^5.4.5"
   },
   "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
