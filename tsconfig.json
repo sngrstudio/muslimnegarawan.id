@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "gql-type": ["./.graphql/graphql.type.ts"],
       "~/*": ["./src/*"]
     }
   }

@@ -1,4 +1,4 @@
-import type { RootQuery } from './graphql'
+import type { RootQuery } from 'gql-type'
 import { fetchQuery } from './fetch'
 
 export const getPost = async (id: string) =>

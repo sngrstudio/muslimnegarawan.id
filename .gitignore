@@ -2,6 +2,7 @@
 dist/
 # generated types
 .astro/
+.graphql/
 
 # dependencies
 node_modules/

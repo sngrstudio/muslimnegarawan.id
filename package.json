@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "astro": "astro",
-    "build": "conc npm:check-* && astro build",
+    "build": "conc npm:codegen && conc npm:check-* && astro build",
     "check-code": "conc \"astro check\" \"tsc --noEmit\"",
     "check-format": "prettier --check .",
     "codegen": "graphql-codegen --config codegen.ts",
-    "dev": "astro dev",
+    "dev": "conc npm:codegen && astro dev",
     "format": "prettier --write .",
     "preview": "astro preview",
     "start": "astro dev"
@@ -27,6 +27,7 @@
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
     "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
     "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.4.5"
   },

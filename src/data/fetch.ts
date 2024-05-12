@@ -4,7 +4,7 @@ export const gql = String.raw
 export const fetchQuery = async ({
   query,
   queryId,
-  variables,
+  variables
 }: {
   query?: ReturnType<typeof gql>
   queryId?: string
@@ -18,7 +18,7 @@ export const fetchQuery = async ({
         queryId ? `?queryId=${queryId}` : '',
         variables
           ? `&variables=${encodeURIComponent(JSON.stringify(variables))}`
-          : '',
+          : ''
       ].join('')
     )
 
