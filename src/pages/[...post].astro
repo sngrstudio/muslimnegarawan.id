@@ -1,0 +1,23 @@
+---
+import { getPost } from '~/data/posts'
+import Layout from '~/layouts/layout.astro'
+
+const { post: postId } = Astro.params
+const {
+  data: { post },
+} = await getPost(postId!)
+
+if (!post) return Astro.redirect('/404')
+---
+
+<Layout>
+  <section>
+    <article>
+      <hgroup>
+        <h1>{post.title}</h1>
+      </hgroup>
+
+      <Fragment set:html={post.content} />
+    </article>
+  </section>
+</Layout>
