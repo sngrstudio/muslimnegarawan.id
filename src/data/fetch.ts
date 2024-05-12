@@ -1,15 +1,23 @@
 const GRAPHQL_ENDPOINT = `${import.meta.env.DEV ? import.meta.env.CONTENT_URL : process.env.CONTENT_URL}/wp/graphql`
 
 export const gql = String.raw
+
+type FetchQueryParams = {
+  query?: ReturnType<typeof gql>
+  queryId?: string
+  variables?: Record<string, string | Array<string> | number | undefined>
+}
+
+export type FetchQueryResult<T> = {
+  data: T
+  extensions: any
+}
+
 export const fetchQuery = async ({
   query,
   queryId,
   variables
-}: {
-  query?: ReturnType<typeof gql>
-  queryId?: string
-  variables?: Record<string, string | Array<string> | number | undefined>
-}) => {
+}: FetchQueryParams) => {
   try {
     const response = await fetch(
       [
@@ -28,7 +36,7 @@ export const fetchQuery = async ({
         throw new Error(err.message)
       })
     }
-    return json as unknown
+    return json as FetchQueryResult<unknown>
   } catch (error) {
     console.error(error)
     return null
