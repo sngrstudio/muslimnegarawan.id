@@ -1,8 +1,8 @@
 # build output
 dist/
+
 # generated types
 .astro/
-.graphql/
 
 # dependencies
 node_modules/
@@ -26,3 +26,12 @@ public/apple-touch-icon-*
 public/favicon.ico
 public/maskable-icon-*
 public/pwa-*
+
+# VSCode settings
+.vscode
+
+# Codespaces settings
+.devcontainer.json
+
+# README.md
+README.*

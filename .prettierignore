@@ -1,5 +1,6 @@
 # build output
 dist/
+
 # generated types
 .astro/
 .graphql/
@@ -13,7 +14,6 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-
 # environment variables
 .env
 .env.production
@@ -26,3 +26,6 @@ public/apple-touch-icon-*
 public/favicon.ico
 public/maskable-icon-*
 public/pwa-*
+
+# pnpm lockfile
+pnpm-lock.yaml
