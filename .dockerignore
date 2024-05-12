@@ -33,9 +33,5 @@ public/pwa-*
 # Codespaces settings
 .devcontainer.json
 
-# Prettier settings
-.prettierrc
-.prettierignore
-
 # README.md
 README.*
